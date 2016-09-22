@@ -32,7 +32,6 @@ angular.module('MyApp', ['ngMaterial', 'angular-loading-bar', 'ngAnimate'])
 
             });
 
-
     }
 
     $scope.select = function() {
@@ -40,10 +39,7 @@ angular.module('MyApp', ['ngMaterial', 'angular-loading-bar', 'ngAnimate'])
         this.setSelectionRange(0, this.value.length);
     }
 
-
 }])
-
-
 
 
 .filter('rangeFilter', function() {
@@ -54,7 +50,7 @@ angular.module('MyApp', ['ngMaterial', 'angular-loading-bar', 'ngAnimate'])
         var min = 500;
         var max = rangeInfo;
 
-        // If time is with the range
+        // If stars is within the range(500-20000)
         angular.forEach(items, function(item) {
 
             if (item.stargazers_count >= min && item.stargazers_count <= max) {
